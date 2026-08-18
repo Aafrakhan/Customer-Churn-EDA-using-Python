@@ -1,171 +1,278 @@
-# 📊 Customer Churn Analysis
+📊 Customer Churn Analysis — Exploratory Data Analysis
 
-## 📌 Project Overview
+📌 Project Overview
 
-Customer churn is an important business problem because losing customers can directly affect a company's revenue and growth.
+This project performs an Exploratory Data Analysis (EDA) on customer churn data to identify the factors that are most strongly associated with customer churn.
 
-In this project, I analysed customer data to understand **customer churn behaviour**, identify patterns among customers who leave the service, and determine the factors that may be associated with higher churn.
-
-The project focuses on **data cleaning, exploratory data analysis (EDA), data visualisation, and extracting actionable business insights** using Python.
+The analysis focuses on factors such as contract type, tenure, payment method, internet service, additional services, and demographic attributes to understand customer behaviour and identify opportunities for improving customer retention.
 
 ---
 
-## 🎯 Objectives
+🎯 Objective
 
-The main objectives of this project are:
+The main objectives of this project are to:
 
-* Analyse the overall customer churn rate.
-* Compare customers who churned with those who stayed.
-* Identify customer segments with higher churn.
-* Analyse churn based on demographic and service-related factors.
-* Visualise important patterns and trends.
-* Identify factors associated with customer churn.
-* Generate insights that can help businesses improve customer retention.
-
----
-
-## 🛠️ Tools & Technologies
-
-* **Python**
-* **Pandas** – Data manipulation and analysis
-* **NumPy** – Numerical operations
-* **Matplotlib** – Data visualisation and customisation
-* **Seaborn** – Statistical and categorical visualisation
-* **Jupyter Notebook** – Analysis environment
+- Understand the overall customer churn rate.
+- Identify customer segments with higher churn.
+- Analyse the relationship between churn and contract type.
+- Study the impact of customer tenure on churn.
+- Analyse churn based on payment methods.
+- Explore the relationship between internet services and churn.
+- Evaluate the effect of additional services such as Online Security, Online Backup, Device Protection, and Tech Support.
+- Analyse churn across demographic groups.
+- Generate actionable insights and retention recommendations.
 
 ---
 
-## 🔍 Analysis Performed
+📂 Dataset
 
-### 1. Data Understanding
+The dataset contains 7,043 customer records and 21 columns.
 
-* Inspected the dataset structure.
-* Checked the number of rows and columns.
-* Examined data types.
-* Analysed categorical and numerical variables.
-* Reviewed the distribution of customer attributes.
+Key Features
 
-### 2. Data Cleaning
-
-* Checked for missing values.
-* Checked for duplicate records.
-* Verified data types.
-* Handled data inconsistencies.
-* Prepared the dataset for exploratory analysis.
-
-### 3. Exploratory Data Analysis (EDA)
-
-Analysed customer churn across different variables, including:
-
-* Gender
-* Senior Citizen status
-* Partner status
-* Dependents
-* Tenure
-* Contract type
-* Payment method
-* Internet service
-* Monthly charges
-* Total charges
-* Other customer and service-related attributes
+Feature| Description
+"customerID"| Unique customer identifier
+"gender"| Customer gender
+"SeniorCitizen"| Indicates whether the customer is a senior citizen
+"Partner"| Whether the customer has a partner
+"Dependents"| Whether the customer has dependents
+"tenure"| Number of months the customer has stayed
+"PhoneService"| Phone service subscription
+"MultipleLines"| Multiple phone lines subscription
+"InternetService"| Type of internet service
+"OnlineSecurity"| Online security subscription
+"OnlineBackup"| Online backup subscription
+"DeviceProtection"| Device protection subscription
+"TechSupport"| Technical support subscription
+"StreamingTV"| Streaming TV subscription
+"StreamingMovies"| Streaming movie subscription
+"Contract"| Contract duration
+"PaperlessBilling"| Paperless billing status
+"PaymentMethod"| Customer payment method
+"MonthlyCharges"| Monthly customer charges
+"TotalCharges"| Total customer charges
+"Churn"| Whether the customer left the service
 
 ---
 
-## 📊 Data Visualisation
+🛠️ Technologies & Libraries
 
-To understand customer churn patterns effectively, I created multiple visualisations using **Matplotlib and Seaborn**.
+- Python
+- Pandas — Data manipulation and analysis
+- NumPy — Numerical operations
+- Matplotlib — Data visualisation
+- Seaborn — Statistical visualisation
+- Jupyter Notebook — Analysis environment
 
-### Visualisations Used
-
-* 📊 Count plots
-* 📊 Bar charts
-* 📊 Stacked bar charts
-* 🥧 Pie charts
-* 📈 Percentage-based charts
-* 📉 Distribution plots
-* 🔲 Subplots
-* 📊 Comparative visualisations
-
-### Visualisation Techniques
-
-**Seaborn** was used mainly for statistical and categorical visualisations such as count plots and bar charts.
-
-**Matplotlib** was used for customisation, pie charts, subplots, labels, titles, and overall chart presentation.
-
-I also created **subplots** to display multiple visualisations together, making it easier to compare different customer characteristics and their relationship with churn.
-
-**Stacked bar charts with percentage labels** were used to compare the proportion of churned and non-churned customers within different customer segments.
-
-**Pie charts** were used to represent part-to-whole distributions where appropriate.
+The notebook imports Pandas, NumPy, Matplotlib, and Seaborn for the analysis.
 
 ---
 
-## 📈 Key Insights
+🔍 Project Workflow
 
-The analysis helped identify several patterns in customer churn:
+1. Data Loading
 
-* Customers with certain contract types show significantly different churn behaviour.
-* Customers with shorter tenure tend to be more vulnerable to churn.
-* Churn varies across different payment methods and service categories.
-* Senior Citizen customers show different churn proportions compared with non-senior customers.
-* Monthly charges and service-related factors can influence customer churn behaviour.
-* Certain customer segments have a noticeably higher proportion of churned customers.
+The customer churn dataset was imported into a Pandas DataFrame.
 
-> The exact findings and percentages are available in the analysis notebook.
+2. Data Inspection
 
----
+Initial inspection was performed using:
 
-## 💡 Business Recommendations
+- "df.shape"
+- "df.info()"
+- "df.describe()"
+- "df.isnull().sum()"
+- Duplicate checks
 
-Based on the analysis, businesses can consider:
+The dataset initially contained "TotalCharges" as an object data type.
 
-* Offering incentives to customers during the early stages of their subscription.
-* Providing personalised retention offers to high-risk customers.
-* Encouraging customers to move towards longer-term contracts.
-* Identifying customers with high monthly charges and addressing their concerns.
-* Improving customer support and service experience.
-* Monitoring high-risk customer segments regularly.
-* Using customer data to develop targeted retention strategies.
+3. Data Cleaning
 
----
+The following cleaning steps were performed:
 
-## 🔄 Project Workflow
+- Replaced blank values in "TotalCharges" with "0".
+- Converted "TotalCharges" from "object" to "float".
+- Checked for missing values.
+- Checked for duplicate records.
+- Checked for duplicate customer IDs.
+- Converted the "SeniorCitizen" indicator from "0/1" into a more readable Yes/No representation.
 
-```text
-Data Collection
-       ↓
-Data Understanding
-       ↓
-Data Cleaning
-       ↓
-Exploratory Data Analysis
-       ↓
-Data Visualisation
-       ↓
-Identify Churn Patterns
-       ↓
-Business Insights
-       ↓
-Recommendations
+After conversion, "TotalCharges" was stored as a numerical "float64" column.
 
-## 📌 Conclusion
+4. Exploratory Data Analysis
 
-This project demonstrates how **Python, Pandas, Matplotlib, and Seaborn** can be used to perform exploratory data analysis and understand customer behaviour.
+Different visualisation techniques were used to understand customer churn patterns, including:
 
-Through data cleaning, analysis, and multiple visualisation techniques such as **count plots, bar charts, stacked bar charts, pie charts, percentage charts, and subplots**, the project identifies customer segments that may have a higher likelihood of churn.
-
-The insights generated can help businesses develop more targeted **customer retention strategies** and make data-driven decisions.
+- Count plots
+- Bar charts
+- Stacked percentage charts
+- Pie charts
+- Subplots
+- Comparative churn visualisations
 
 ---
 
-## 👩‍💻 Author
+📈 Key Analysis & Insights
 
-**Aafra Khan**
+📄 Contract Type
 
-**Aspiring Data Analyst**
+Customers with month-to-month contracts are more likely to churn compared with customers having one-year or two-year contracts.
 
-### Skills
+Insight: Longer contractual commitment is associated with better customer retention.
 
-`Python` `SQL` `Excel` `Power BI` `Pandas` `NumPy` `Matplotlib` `Seaborn` `Data Analysis` `Data Visualisation`
+---
 
-This project is part of my **Data Analytics Portfolio** and demonstrates my practical approach to data cleaning, exploratory data analysis, visualisation, and business insight generation.
+⏳ Customer Tenure
+
+Customers with short tenure, particularly around the first 1–2 months, show substantially higher churn.
+
+Insight: The early customer lifecycle is an important period for retention efforts.
+
+---
+
+💳 Payment Method
+
+Customers using electronic checks show higher churn compared with other payment methods.
+
+Insight: Payment method is strongly associated with customer churn and may also indicate differences in customer engagement.
+
+---
+
+🌐 Internet Service
+
+Fiber optic customers show considerably higher churn than DSL and customers without internet service.
+
+Insight: The company should investigate potential pricing, service-quality, or customer-experience issues among fiber optic users.
+
+---
+
+🛡️ Additional Services
+
+Customers without services such as:
+
+- Online Security
+- Online Backup
+- Device Protection
+- Tech Support
+
+show noticeably higher churn than customers who subscribe to these services.
+
+Insight: Additional services may be associated with stronger customer engagement and retention.
+
+---
+
+👵 Senior Citizens
+
+A comparatively higher percentage of senior citizens have churned compared with non-senior customers.
+
+Insight: Senior customers could benefit from targeted support and retention initiatives.
+
+---
+
+👥 Demographics & Streaming Services
+
+The analysis indicates that gender and streaming service usage have little to no predictive power for churn, compared with factors such as contract type, tenure, payment method, and service subscriptions.
+
+---
+
+📊 Overall Findings
+
+The analysis found that 26.54% of customers have churned.
+
+The strongest churn-associated factors identified in the analysis are:
+
+- Month-to-month contracts
+- Short customer tenure
+- Electronic check payments
+- Fiber optic internet service
+- Lack of additional support/security services
+- Senior citizen customer segment
+
+In contrast, customers with longer tenure, longer-term contracts, and support/security add-ons are more likely to remain customers.
+
+---
+
+💡 Business Recommendations
+
+Based on the analysis, the following retention strategies are recommended:
+
+1. Encourage Longer Contracts
+
+Offer discounts, benefits, or loyalty incentives to encourage month-to-month customers to move towards one-year or two-year contracts.
+
+2. Focus on the First 1–2 Months
+
+Introduce a stronger onboarding programme with welcome offers, proactive communication, and early customer support.
+
+3. Promote Add-on Services
+
+Create bundled or discounted packages for:
+
+- Online Security
+- Tech Support
+- Device Protection
+- Online Backup
+
+4. Investigate Fiber Optic Churn
+
+Review pricing, service quality, and customer complaints associated with fiber optic customers.
+
+5. Encourage Alternative Payment Methods
+
+Encourage customers using electronic checks to adopt automatic bank transfer or credit-card payments.
+
+6. Develop Senior-Citizen Retention Strategies
+
+Provide targeted support, personalised assistance, or suitable pricing plans for senior customers.
+
+These recommendations are directly based on the retention strategies proposed in the analysis.
+
+---
+
+📊 Visualisations
+
+The project uses multiple visualisation techniques to communicate insights, including:
+
+- Customer churn distribution
+- Churn by contract type
+- Churn by payment method
+- Churn by senior citizen status
+- Churn by internet service
+- Churn by additional services
+- Stacked percentage charts
+- Pie charts
+- Subplots for categorical comparisons
+
+🎓 Skills Demonstrated
+
+This project demonstrates practical skills in:
+
+- Data Cleaning
+- Exploratory Data Analysis
+- Data Preprocessing
+- Missing Value Handling
+- Data Type Conversion
+- Duplicate Detection
+- Categorical Data Analysis
+- Statistical Analysis
+- Data Visualisation
+- Business Insight Generation
+- Customer Retention Analysis
+
+---
+
+📌 Conclusion
+
+This EDA demonstrates that customer churn is not evenly distributed across the customer base. Contract commitment, early tenure, payment method, internet service, additional services, and senior-citizen status are among the key factors associated with churn.
+
+The analysis provides actionable insights that can help a business identify high-risk customer segments and design targeted retention strategies rather than applying the same approach to every customer.
+
+---
+
+👩‍💻 Author
+
+Afra Nasir Khan
+
+Aspiring Data Analyst | Python | SQL | Excel | Power BI
+
+This project is part of my Data Analytics portfolio, demonstrating my ability to clean, analyse, visualise, and communicate insights from real-world datasets.
