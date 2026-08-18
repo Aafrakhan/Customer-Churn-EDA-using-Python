@@ -190,45 +190,6 @@ The strongest churn-associated factors identified in the analysis are:
 
 In contrast, customers with longer tenure, longer-term contracts, and support/security add-ons are more likely to remain customers.
 
----
-
-💡 Business Recommendations
-
-Based on the analysis, the following retention strategies are recommended:
-
-1. Encourage Longer Contracts
-
-Offer discounts, benefits, or loyalty incentives to encourage month-to-month customers to move towards one-year or two-year contracts.
-
-2. Focus on the First 1–2 Months
-
-Introduce a stronger onboarding programme with welcome offers, proactive communication, and early customer support.
-
-3. Promote Add-on Services
-
-Create bundled or discounted packages for:
-
-- Online Security
-- Tech Support
-- Device Protection
-- Online Backup
-
-4. Investigate Fiber Optic Churn
-
-Review pricing, service quality, and customer complaints associated with fiber optic customers.
-
-5. Encourage Alternative Payment Methods
-
-Encourage customers using electronic checks to adopt automatic bank transfer or credit-card payments.
-
-6. Develop Senior-Citizen Retention Strategies
-
-Provide targeted support, personalised assistance, or suitable pricing plans for senior customers.
-
-These recommendations are directly based on the retention strategies proposed in the analysis.
-
----
-
 📊 Visualisations
 
 The project uses multiple visualisation techniques to communicate insights, including:
