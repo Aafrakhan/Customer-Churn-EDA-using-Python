@@ -1,12 +1,9 @@
-📊 Customer Churn Analysis — Exploratory Data Analysis
+# 📊 Customer Churn Analysis — Exploratory Data Analysis
 
-📌 Project Overview
+## 📌 Project Overview
 
 This project performs an Exploratory Data Analysis (EDA) on customer churn data to identify the factors that are most strongly associated with customer churn.
-
 The analysis focuses on factors such as contract type, tenure, payment method, internet service, additional services, and demographic attributes to understand customer behaviour and identify opportunities for improving customer retention.
-
----
 
 🎯 Objective
 
@@ -21,8 +18,6 @@ The main objectives of this project are to:
 - Evaluate the effect of additional services such as Online Security, Online Backup, Device Protection, and Tech Support.
 - Analyse churn across demographic groups.
 - Generate actionable insights and retention recommendations.
-
----
 
 📂 Dataset
 
@@ -53,8 +48,6 @@ Feature| Description
 "TotalCharges"| Total customer charges
 "Churn"| Whether the customer left the service
 
----
-
 🛠️ Technologies & Libraries
 
 - Python
@@ -65,8 +58,6 @@ Feature| Description
 - Jupyter Notebook — Analysis environment
 
 The notebook imports Pandas, NumPy, Matplotlib, and Seaborn for the analysis.
-
----
 
 🔍 Project Workflow
 
@@ -110,7 +101,6 @@ Different visualisation techniques were used to understand customer churn patter
 - Subplots
 - Comparative churn visualisations
 
----
 
 📈 Key Analysis & Insights
 
@@ -120,7 +110,6 @@ Customers with month-to-month contracts are more likely to churn compared with c
 
 Insight: Longer contractual commitment is associated with better customer retention.
 
----
 
 ⏳ Customer Tenure
 
@@ -128,7 +117,6 @@ Customers with short tenure, particularly around the first 1–2 months, show su
 
 Insight: The early customer lifecycle is an important period for retention efforts.
 
----
 
 💳 Payment Method
 
@@ -136,7 +124,6 @@ Customers using electronic checks show higher churn compared with other payment 
 
 Insight: Payment method is strongly associated with customer churn and may also indicate differences in customer engagement.
 
----
 
 🌐 Internet Service
 
@@ -144,7 +131,6 @@ Fiber optic customers show considerably higher churn than DSL and customers with
 
 Insight: The company should investigate potential pricing, service-quality, or customer-experience issues among fiber optic users.
 
----
 
 🛡️ Additional Services
 
@@ -159,7 +145,6 @@ show noticeably higher churn than customers who subscribe to these services.
 
 Insight: Additional services may be associated with stronger customer engagement and retention.
 
----
 
 👵 Senior Citizens
 
@@ -167,13 +152,11 @@ A comparatively higher percentage of senior citizens have churned compared with 
 
 Insight: Senior customers could benefit from targeted support and retention initiatives.
 
----
 
 👥 Demographics & Streaming Services
 
 The analysis indicates that gender and streaming service usage have little to no predictive power for churn, compared with factors such as contract type, tenure, payment method, and service subscriptions.
 
----
 
 📊 Overall Findings
 
@@ -220,20 +203,9 @@ This project demonstrates practical skills in:
 - Business Insight Generation
 - Customer Retention Analysis
 
----
 
 📌 Conclusion
 
 This EDA demonstrates that customer churn is not evenly distributed across the customer base. Contract commitment, early tenure, payment method, internet service, additional services, and senior-citizen status are among the key factors associated with churn.
 
 The analysis provides actionable insights that can help a business identify high-risk customer segments and design targeted retention strategies rather than applying the same approach to every customer.
-
----
-
-👩‍💻 Author
-
-Afra Nasir Khan
-
-Aspiring Data Analyst | Python | SQL | Excel | Power BI
-
-This project is part of my Data Analytics portfolio, demonstrating my ability to clean, analyse, visualise, and communicate insights from real-world datasets.
